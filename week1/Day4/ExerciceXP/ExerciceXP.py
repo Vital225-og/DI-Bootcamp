@@ -2,101 +2,101 @@ from Exercice3 import Dog
 import random
 
 
-# # class Pets():
-# #     def __init__(self, animals):
-# #         self.animals = animals
+class Pets():
+    def __init__(self, animals):
+        self.animals = animals
 
-# #     def walk(self):
-# #         for animal in self.animals:
-# #             print(animal.walk())
+    def walk(self):
+        for animal in self.animals:
+            print(animal.walk())
 
-# # class Cat():
-# #     is_lazy = True
+class Cat():
+    is_lazy = True
 
-# #     def __init__(self, name, age):
-# #         self.name = name
-# #         self.age = age
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
 
-# #     def walk(self):
-# #         return f'{self.name} is just walking around'
+    def walk(self):
+        return f'{self.name} is just walking around'
 
-# # class Bengal(Cat):
-# #     def sing(self, sounds):
-# #         return f'{sounds}'
+class Bengal(Cat):
+    def sing(self, sounds):
+        return f'{sounds}'
 
-# # class Chartreux(Cat):
-# #     def sing(self, sounds):
-# #         return f'{sounds}'
-
-
-# # class Siamese(Cat):
-# #     def sing(self, sounds):
-# #         return f'{sounds}'
-
-# # bengal = Bengal('bengal', 5)
-# # chartreux = Chartreux('chartreux' , 3)
-# # siamese = Siamese('siamese' , 4)
-# # all_cats = [bengal, chartreux, siamese]
-# # sara_pets = Pets(all_cats)
-
-# # sara_pets.walk()
+class Chartreux(Cat):
+    def sing(self, sounds):
+        return f'{sounds}'
 
 
+class Siamese(Cat):
+    def sing(self, sounds):
+        return f'{sounds}'
+
+bengal = Bengal('bengal', 5)
+chartreux = Chartreux('chartreux' , 3)
+siamese = Siamese('siamese' , 4)
+all_cats = [bengal, chartreux, siamese]
+sara_pets = Pets(all_cats)
+
+sara_pets.walk()
 
 
-# # exercice 2
 
 
-# class Dog():
-#     def __init__(self, name, age, weight):
-#         self.name = name
-#         self.age = age
-#         self.weight = weight
+exercice 2
 
-#     def bark(self):
-#         return f'{self.name} aboie'
-#     def run_speed(self):
-#         return self.weight / self.age * 10
+
+class Dog():
+    def __init__(self, name, age, weight):
+        self.name = name
+        self.age = age
+        self.weight = weight
+
+    def bark(self):
+        return f'{self.name} aboie'
+    def run_speed(self):
+        return self.weight / self.age * 10
     
-#     def fight(self, other_dog):
-#         if self.run_speed() * self.weight > other_dog.run_speed() * other_dog.weight:
-#             return f'{self.name} wins the fight'
-#         elif self.run_speed() * self.weight < other_dog.run_speed() * other_dog.weight:
-#             return f'{other_dog.name} wins the fight'
-#         else:
-#             return 'The fight is a tie'
+    def fight(self, other_dog):
+        if self.run_speed() * self.weight > other_dog.run_speed() * other_dog.weight:
+            return f'{self.name} wins the fight'
+        elif self.run_speed() * self.weight < other_dog.run_speed() * other_dog.weight:
+            return f'{other_dog.name} wins the fight'
+        else:
+            return 'The fight is a tie'
 
 
-# davids_dog = Dog('Rex', 5, 20)
-# sarahs_dog = Dog('Buddy', 3, 15)
-# vital_dogs = Dog('Max', 4, 25)
+davids_dog = Dog('Rex', 5, 20)
+sarahs_dog = Dog('Buddy', 3, 15)
+vital_dogs = Dog('Max', 4, 25)
 
-# print(f'combat entre {davids_dog.name} et {sarahs_dog.name} : {davids_dog.fight(sarahs_dog)}')
-# print(f'combat entre {davids_dog.name} et {vital_dogs.name} : {davids_dog.fight(vital_dogs)}')
-# print(davids_dog.bark())
-# print(davids_dog.run_speed())
-# print(davids_dog.fight(sarahs_dog))
-# print(davids_dog.fight(vital_dogs))
+print(f'combat entre {davids_dog.name} et {sarahs_dog.name} : {davids_dog.fight(sarahs_dog)}')
+print(f'combat entre {davids_dog.name} et {vital_dogs.name} : {davids_dog.fight(vital_dogs)}')
+print(davids_dog.bark())
+print(davids_dog.run_speed())
+print(davids_dog.fight(sarahs_dog))
+print(davids_dog.fight(vital_dogs))
 
-# print(f'combat entre {sarahs_dog.name} et {davids_dog.name} : {sarahs_dog.fight(davids_dog)}')
-# print(f'combat entre {vital_dogs.name} et {sarahs_dog.name} : {vital_dogs.fight(sarahs_dog)}')
+print(f'combat entre {sarahs_dog.name} et {davids_dog.name} : {sarahs_dog.fight(davids_dog)}')
+print(f'combat entre {vital_dogs.name} et {sarahs_dog.name} : {vital_dogs.fight(sarahs_dog)}')
 
-# print(vital_dogs.bark())
-# print(vital_dogs.run_speed()) 
-# print(vital_dogs.fight(davids_dog))
-# print(vital_dogs.fight(sarahs_dog))
-
-
-# print(f'combat entre {sarahs_dog.name} et {davids_dog.name} : {sarahs_dog.fight(davids_dog)}')
-# print(f'combat entre {sarahs_dog.name} et {vital_dogs.name} : {sarahs_dog.fight(vital_dogs)}')
-# print(sarahs_dog.bark())
-# print(sarahs_dog.run_speed())
-# print(sarahs_dog.fight(davids_dog))
-# print(sarahs_dog.fight(vital_dogs))
+print(vital_dogs.bark())
+print(vital_dogs.run_speed()) 
+print(vital_dogs.fight(davids_dog))
+print(vital_dogs.fight(sarahs_dog))
 
 
+print(f'combat entre {sarahs_dog.name} et {davids_dog.name} : {sarahs_dog.fight(davids_dog)}')
+print(f'combat entre {sarahs_dog.name} et {vital_dogs.name} : {sarahs_dog.fight(vital_dogs)}')
+print(sarahs_dog.bark())
+print(sarahs_dog.run_speed())
+print(sarahs_dog.fight(davids_dog))
+print(sarahs_dog.fight(vital_dogs))
 
-# # exerccice 3
+
+
+exerccice 3
 
 
 class PetDog(Dog):
@@ -128,7 +128,7 @@ print(my_dog.play(my_milou.name))
 my_dog.play("Buddy", "Max")
 
 
-# exercise 4
+exercise 4
 
 class Person:
     def __init__(self, first_name, age, last_name=""):
